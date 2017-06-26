@@ -1,1 +1,1 @@
-# HTML5-A-Linguagem-de-Marcacao-que-Revolucionou-a-Web
+# HTML5: A Linguagem de Marcação que Revolucionou a Web
