@@ -6,3 +6,9 @@
 .corum{
 	color: #F1F1F1;
 }
+
+#arrastar{
+	width: 80px;
+	height: 80px;
+	background-color: blue;
+}
