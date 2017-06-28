@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<!-- output, progress -->
+	<!-- output, progress, time, dialog -->
 	<title>Capitulo 2 - Parte 4</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="estilos.css">
 
+	<!-- Faz parte do exemplo do output -->
 	<script type="text/javascript">
 		
-		//Faz parte do exemplo do output
 		function calcularValorTotal() {
 			var qdeItens = document.forms['formulario']['qde'].value;
 			var valorTotal = (qdeItens * 320).toFixed(2); //Esse toFixed(2) determina a quantidade de zero depois da virgula
@@ -21,6 +21,7 @@
 
 	</script>
 
+	<!-- Faz parte da barra de progresso -->
 	<script type="text/javascript">
 
 		var progresso = 0;
@@ -32,6 +33,20 @@
 				document.getElementById("pg").value = progresso;
 				setTimeout("start();", 300);
 			}
+		}
+
+	</script>
+
+	<!-- Faz parte da tag dialog -->
+	<script type="text/javascript">
+		
+		var janela = document.querySelector('dialog');
+		document.querySelector('#abrir').onclick = function(){
+			janela.show();
+		}
+
+		document.querySelector('#fechar').onclick = function(){
+			janela.close();
 		}
 
 	</script>
@@ -75,6 +90,27 @@
 			<p>No Paraná encontramos a mata de araucária uma das mais importantes florestas subtropicais do mundo...</p>
 		</section>
 	</article>
+
+	<!-- Esse elemento (time: datetime) destina-se a marcar tanto horário na faixa 0-24h quanto uma data do calendário gregoriano. -->
+	<article>
+		<h1>Tarefas</h1>
+		<footer>Publicado em: <time datetime="2010-12-19">Hoje</time>.</footer>
+		<p>Trocar a lâmpada da sala.</p>
+	</article>
+
+	<article>
+		<h1>Tarefas</h1>
+		<footer>Publicado em: <time datetime="2010-12-19T09:15Z"></time>.</footer>
+		<p>Trocar a lâmpada da sala.</p>
+	</article>
+
+	<!-- A tag dialog destina-se a criar uma caixa de diálogo, uma caixa de inspeção ou uma janela modal de interação com o usuário. -->
+	<dialog>
+		<h3>Janela Modal</h3>
+		<p>Conteúdo da janela modal</p>
+		<button id="fechar">X</button>
+	</dialog>
+	<button id="abrir">Abrir janela modal</button>
 
 </body>
 </html>
