@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- output,  -->
+	<title>Capitulo 2 - Parte 4</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+
+
+	<script type="text/javascript">
+			var barraAndamento = document.getElementById('p');
+			function updateProgress(valorAtual){
+				barraAndamento.value = valorAtual;
+				
+				for (var i = 0; i <= 100; i++) {
+					barraAndamento.getElementByTagName('span')[0].textContent = i;
+				}
+			}
+		</script>
+
+</head>
+<body>
+	<!-- Utiliando "output" -->
+	<p>Preço unitário do produto: R$320,00</p>
+	<form name="formulario" method="get" action="">
+		<p><label>Quantidade: <input type="text" name="qde" onclick="calcularValorTotal()"></label></p>
+		<p>valor total: R$<output name="vtotal"></output></p>
+	</form>
+
+
+	<section onload="updateProgress(0)">
+		<h2>Andamento da tarefa</h2>
+		<p>Progresso: <progress id="p" value="0" max="100"><span>0</span>%</progress></p>
+		
+	</section>
+
+
+</body>
+</html>
