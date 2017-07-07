@@ -36,37 +36,39 @@
 		<input type="button" value="Volume(-)" id="vmenos">
 	</div>
 
-	<!-- 
-	<video src="video.mp4">
-	</video> -->
 
 	<!-- O atributo "controls" faz com que o navegador renderize uma barra de controle nativa contendo botões do tipo play e pause bem como controle de volume -->
-	<!--
+	<h3>Com atributos: controls</h3>
 	<video controls>
 		<source src="video.mp4" type="video/mp4" media="screen">
-	</video> -->
+	</video>
 
 	<!-- Os atributos "autoplay" e "loop" destinam-se resepectivamente a iniciar o vídeo automaticamente, tão logo a página seja carregada e a repetir o vídeo indefinidamente -->
-	<!-- 
+	<h3>Com atributos: controls, autoplay e loop</h3>
 	<video controls autoplay loop>
 		<source src="video.mp4" type="video/mp4" media="screen">
-	</video> -->
+	</video>
 
 	<!-- O atributo "poster" destina-se a definir uma imagem a ser rederizada inicialmente e enquanto as informações sobre o vídeo não estiverem totalmente carregadas ou o usuário não adicionar o início do vídeo -->
-	<!--
+	<h3>Com atributos: poster e controls</h3>
 	<video poster="curso-em-video.png" controls>
 		<source src="video.ogv" type="video/ogg">
 		<source src="video.mp4" type="video/mp4">
-	</video> -->
+	</video>
 
 	<!-- O atributo audio adimite o valor muted e, quando presente, faz com que o som do vídeo seja por padrão colocado no estado mudo -->
+	<h3>Com atributos: poster, controls e muted</h3>
 	<video poster="curso-em-video.png" controls muted>
 		<source src="video.ogg" type="video/ogg">	
 		<source src="video.mp4" type="video/mp4">
 	</video>
 
-
-
+	<!-- Os atributos "width" e "height" definem, respectivamente, a largura e altura (dimensões) da área de apresentação do vídeo. -->
+	<h3>Com atributos: controls, poster, width e height</h3>
+	<video controls poster="curso-em-video.png" width="400" height="400">
+		<source src="video.ogg" type="video/ogg">	
+		<source src="video.mp4" type="video/mp4">
+	</video>
 
 
 
