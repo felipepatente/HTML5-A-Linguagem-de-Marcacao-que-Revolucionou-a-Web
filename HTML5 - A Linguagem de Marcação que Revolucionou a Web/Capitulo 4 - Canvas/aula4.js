@@ -54,3 +54,25 @@ function limparArea(){
 	//Esse método destina-se a apagar uma área retangular de canvas
 	ctx.clearRect(120,45,50,50);
 }
+
+
+function sombrear(){
+
+	var canvas = document.getElementById('quadro');
+	var ctx = canvas.getContext('2d');
+
+	ctx.fillStyle = '#00FFAA';
+
+	//Defini a cor da sombra com uso de um valor CSS
+	ctx.shadowColor = '#AA00AA';
+
+	//Definem com uso de um número finito a espessura e deslocamento da sombra
+	ctx.shadowOffsetX = '10px';
+	ctx.shadowOffsetY = '50px';
+	
+	//Defini com uso de um número maior ou igual a zero o desfoque (efeito blur) da cor da sombra
+	ctx.shadowBlur = '80';
+
+	ctx.fillRect(100,25,100,100);
+
+}
