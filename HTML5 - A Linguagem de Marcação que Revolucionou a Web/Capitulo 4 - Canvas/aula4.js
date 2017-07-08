@@ -82,9 +82,12 @@ function linhaPoligonal(){
 	var canvas = document.getElementById('quadro');
 	var ctx = canvas.getContext('2d');
 
+	//Esse método destina-se a resetar o path corrente e nativo do contexto canvas criando condições para iniciar a
+	//construção de um novo path. Todo path ou supath a ser construído deverá começar com esse método
 	ctx.beginPath();
 	ctx.storkeStyle = '#F00';
 	ctx.lineWidth = 2;
+
 	ctx.moveTo(20,20);
 	ctx.lineTo(80,120);
 	ctx.stroke();
