@@ -33,6 +33,6 @@ function init(){
 			ctr.volume -= 0.25;
 		},false);
 	}
+	alert("ola");
 }
 
-window.onload = init;
