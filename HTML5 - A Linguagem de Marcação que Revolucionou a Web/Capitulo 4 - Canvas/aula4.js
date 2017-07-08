@@ -76,3 +76,40 @@ function sombrear(){
 	ctx.fillRect(100,25,100,100);
 
 }
+
+function linhaPoligonal(){
+
+	var canvas = document.getElementById('quadro');
+	var ctx = canvas.getContext('2d');
+
+	ctx.beginPath();
+	ctx.storkeStyle = '#F00';
+	ctx.lineWidth = 2;
+	ctx.moveTo(20,20);
+	ctx.lineTo(80,120);
+	ctx.stroke();
+
+	ctx.beginPath();
+	ctx.strokeStyle = '#009';
+	ctx.moveTo(80,120);
+	ctx.lineTo(150,30);
+	ctx.stroke();
+
+	ctx.beginPath();
+	ctx.strkeStyle = '#090';
+	ctx.moveTo(150,30);
+	ctx.lineTo(350,180);
+	ctx.stroke();
+
+
+}
+
+
+
+
+
+
+
+
+
+
