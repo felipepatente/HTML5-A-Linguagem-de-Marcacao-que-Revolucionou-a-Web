@@ -88,7 +88,9 @@ function linhaPoligonal(){
 	ctx.storkeStyle = '#F00';
 	ctx.lineWidth = 2;
 
+	//Esse método desetina-se a posicionar a pena de desenho nas coordenadas x e y
 	ctx.moveTo(20,20);
+	
 	ctx.lineTo(80,120);
 	ctx.stroke();
 
