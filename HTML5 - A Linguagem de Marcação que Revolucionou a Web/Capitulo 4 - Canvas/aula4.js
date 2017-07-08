@@ -4,7 +4,11 @@ function chamarFuncao(){
 	
 	//Esse atributo destina-se a definir a cor de linhas do elemento gráfico criado
 	ctx.strokeStyle = '#F00';
+
+	//Esse atributo destina-se a definir a espessura das linhas, em pixel, do elemento gráfico criado	
 	ctx.lineWidth = 2;
+
+
 	ctx.strokeRect(30,30,80,40);
 	
 	ctx.strokeStyle = '#00F';
