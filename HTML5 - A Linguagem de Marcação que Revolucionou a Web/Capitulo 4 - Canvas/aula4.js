@@ -90,8 +90,10 @@ function linhaPoligonal(){
 
 	//Esse método desetina-se a posicionar a pena de desenho nas coordenadas x e y
 	ctx.moveTo(20,20);
-	
+
+	//Esse método destina-se a desenhar uma linha reta desde a posição na qual se encontra a pena até as coordenadas x e y
 	ctx.lineTo(80,120);
+	
 	ctx.stroke();
 
 	ctx.beginPath();
