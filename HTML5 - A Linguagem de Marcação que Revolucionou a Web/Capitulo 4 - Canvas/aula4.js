@@ -244,7 +244,25 @@ function desenharRetangulo(){
 
 }
 
+function fecharCaminho(){
 
+	var canvas = document.getElementById('quadro');
+	var ctx = canvas.getContext('2d');
+
+	ctx.lineWidth = 2;
+
+	ctx.beginPath();
+	ctx.moveTo(20,20);
+	ctx.strokeStyle = '#F00';
+	ctx.lineTo(80,190);
+	ctx.lineTo(180,160);
+	ctx.lineTo(220,20);
+	
+	//Esse método destina-se a fazer o fechamento de um caminho
+	ctx.closePath();
+	ctx.stroke();
+
+}
 
 
 
