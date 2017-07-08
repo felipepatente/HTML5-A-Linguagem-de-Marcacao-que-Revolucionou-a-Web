@@ -145,6 +145,67 @@ function arco(){
 }
 
 
+function arcoComCentro(){
+
+	var canvas = document.getElementById('quadro');
+	var ctx = canvas.getContext('2d');
+
+	ctx.lineWidth = 4; //espessura da linha para todos os arcos
+
+	ctx.beginPath();
+	ctx.strokeStyle = '#F00';
+
+	/*
+	 arc(x, y, r, anguloInicial, anguloFinal, sentido)
+	 Esse método destina-se a desenhar um arco com centro nas coordenadas x e y com raio r e ângulo inicial e final
+	 definidos em radianos.
+	*/
+	ctx.arc(80, 100, 40, 0, Math.PI * 2, true);
+	ctx.stroke();
+
+	ctx.beginPath();
+	ctx.strokeStyle = '#090';
+	ctx.arc(200, 100, 40, 0, Math.PI, true)
+	ctx.stroke();
+
+	ctx.beginPath();
+	ctx.strokeStyle = '#00F';
+	ctx.arc(200, 100, 40, 0, Math.PI, false)
+	ctx.stroke();
+
+	ctx.beginPath();
+	ctx.strokeStyle = '#F90';
+	ctx.arc(320, 100, 40, 0, 3/4*Math.PI, true)
+	ctx.stroke();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
