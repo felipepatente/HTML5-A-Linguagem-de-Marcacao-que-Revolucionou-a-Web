@@ -221,7 +221,28 @@ function preencherArcos(){
 }
 
 
+function desenharRetangulo(){
 
+	var canvas = document.getElementById('quadro');
+	var ctx = canvas.getContext('2d');
+
+	ctx.lineWidth = 4;
+
+	ctx.beginPath();
+	ctx.strokeStyle = '#F00';
+	ctx.fillStyle = 'FFF';
+
+	/*
+	 Esse método rect(x, y, l, h) destina-se a desenhar um retângulo. Os parâmetros x e y definem as coordenadas
+	 do canto superior esquerdo do retângulo e os prrâmetros l e h definem, respectivamente, a largura e a altura,
+	 em picel do retângulo
+	*/
+	ctx.rect(50, 10, 200, 120);
+	
+	ctx.fill();
+	ctx.stroke();
+
+}
 
 
 
