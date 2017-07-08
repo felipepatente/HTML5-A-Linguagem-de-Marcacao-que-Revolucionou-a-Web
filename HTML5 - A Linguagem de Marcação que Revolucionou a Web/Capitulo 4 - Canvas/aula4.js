@@ -265,7 +265,22 @@ function fecharCaminho(){
 }
 
 
+function formaAcabamentoLinha(){
 
+	var canvas = document.getElementById('quadro');
+	var ctx = canvas.getContext('2d');
+	
+	ctx.lineJoin = 'round';
+	ctx.lineCap = 'square';
+	ctx.globalAlpha = 0.6;
+
+	ctx.lineWidth = 10;
+	ctx.beginPath();
+	ctx.moveTo(50, 50);
+	ctx.lineTo(200,100);
+	ctx.stroke();
+
+}
 
 
 
