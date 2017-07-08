@@ -1,7 +1,8 @@
-function chamarFuncao(){
+function desenharRetangulos(){
+		
 	var canvas = document.getElementById('quadro');
 	var ctx = canvas.getContext('2d');
-	
+
 	//Esse atributo destina-se a definir a cor de linhas do elemento gráfico criado
 	ctx.strokeStyle = '#F00';
 
@@ -39,6 +40,17 @@ function chamarFuncao(){
 
 
 
+function limparArea(){
+		
+	var canvas = document.getElementById('quadro');
+	var ctx = canvas.getContext('2d');
 
+	ctx.strokeStyle = '#000';
+	ctx.lineWidth = 2;
+	ctx.fillStyle = '#060';
+	ctx.fillRect(65,25,170,90);
+	ctx.strokeRect(60,20,180,100);
 
-
+	//Esse método destina-se a apagar uma área retangular de canvas
+	ctx.clearRect(120,45,50,50);
+}
