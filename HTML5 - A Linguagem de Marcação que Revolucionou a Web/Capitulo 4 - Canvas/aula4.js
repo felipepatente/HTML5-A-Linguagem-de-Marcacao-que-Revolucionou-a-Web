@@ -269,9 +269,15 @@ function formaAcabamentoLinha(){
 
 	var canvas = document.getElementById('quadro');
 	var ctx = canvas.getContext('2d');
-	
+
+	//Esse atributo destina-se a definir a forma como as linhas de unem. Os valores possíveis são: miter, bevel e round
 	ctx.lineJoin = 'round';
+
+	//Esse atributo desetina-se a definir a forma de acabamento das extremidades das linhas
 	ctx.lineCap = 'square';
+
+	//Esse atributo destina-se a definir uma transparência e ser aplicada em todos os elementos de canvas. O valor para esse
+	//atributo varia de 0 a 1, sendo 0 transparência (invisibilidade) e 1 opacidade total (nada transparente)
 	ctx.globalAlpha = 0.6;
 
 	ctx.lineWidth = 10;
