@@ -182,7 +182,43 @@ function arcoComCentro(){
 
 
 
+function preencherArcos(){
 
+	var canvas = document.getElementById('quadro');
+	var ctx = canvas.getContext('2d');
+
+	ctx.lineWidth = 4; //espessura da linha para todos os arcos
+
+	ctx.beginPath();
+	ctx.strokeStyle = '#F00';
+	ctx.fillStyle = '#0FF';
+	ctx.arc(80, 100, 40, 0, Math.PI * 2, true);
+	
+	//Esse método destina-se a preencer com uma cor sólida um caminho
+	ctx.fill();
+	ctx.stroke();
+
+	ctx.beginPath();
+	ctx.strokeStyle = '#090';
+	ctx.fillStyle = '#996'
+	ctx.arc(200, 100, 40, 0, Math.PI, true)
+	ctx.fill();
+	ctx.stroke();
+
+	ctx.beginPath();
+	ctx.strokeStyle = '#00F';
+	ctx.fillStyle = '#C6C';
+	ctx.arc(200, 100, 40, 0, Math.PI, false)
+	ctx.fill();
+	ctx.stroke();
+
+	ctx.beginPath();
+	ctx.strokeStyle = '#F90';
+	ctx.fillStyle = '#0C0';
+	ctx.arc(320, 100, 40, 0, 3/4*Math.PI, true)
+	ctx.fill();
+	ctx.stroke();
+}
 
 
 
