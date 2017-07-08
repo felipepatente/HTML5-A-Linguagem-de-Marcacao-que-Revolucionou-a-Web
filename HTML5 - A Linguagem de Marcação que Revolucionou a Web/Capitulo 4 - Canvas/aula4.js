@@ -109,11 +109,40 @@ function linhaPoligonal(){
 	ctx.lineTo(350,180);
 	ctx.stroke();
 
-
 }
 
 
+function arco(){
 
+	var canvas = document.getElementById('quadro');
+	var ctx = canvas.getContext('2d');
+
+	ctx.beginPath();
+	ctx.moveTo(20,50);
+	ctx.strokeStyle = '#F00';
+
+	/* arcTo(x1,y1,x2,y2,r)
+	 Esse método destina-se a desenhar um arco com origem nas coordenadas x1 e y1 e término nas coordenadas
+	 x2 e y2 e com com raio r 
+	*/
+	ctx.arcTo(100,50,100,130,80);
+	
+	ctx.stroke();
+
+	
+	ctx.beginPath();
+	ctx.moveTo(100,130);
+	ctx.strokeStyle = '#009';
+	ctx.arcTo(200,130,200,30,100);
+	ctx.stroke();
+
+	ctx.beginPath();
+	ctx.moveTo(200,30);
+	ctx.strokeStyle = '#090';
+	ctx.arcTo(200,190,380,190,180);
+	ctx.stroke();
+
+}
 
 
 
