@@ -24,7 +24,7 @@ function chamarFuncao(){
 	ctx.strokeStyle = '#000';
 	ctx.lineWidth = 2;
 
-	
+	//Esse atributo destina-se a definir a cor de preenchimento do elemento gráfico criado
 	ctx.fillStyle = 'rgba(0,255,0,0.4)';
 	
 	
