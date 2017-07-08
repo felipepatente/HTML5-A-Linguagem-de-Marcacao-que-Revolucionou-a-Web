@@ -27,7 +27,18 @@ function chamarFuncao(){
 	//Esse atributo destina-se a definir a cor de preenchimento do elemento gráfico criado
 	ctx.fillStyle = 'rgba(0,255,0,0.4)';
 	
-	
-	ctx.fillRect(148,20,200,70)
+	/*
+	  fillRect(x,y,l,h)
+	  Esse método destina-se a desenhar um retângulo com cor sólida. Os parâmetros x e y definem as coordenadas do canto
+	  superior esquerdo do retângulo e os parâmetros l e h definem, respectivamente, a largura e a altura, em pixel,
+	  do retângulo.
+	*/
+	ctx.fillRect(148,20,200,70);
 	ctx.strokeRect(148,20,150,70);
 }
+
+
+
+
+
+
