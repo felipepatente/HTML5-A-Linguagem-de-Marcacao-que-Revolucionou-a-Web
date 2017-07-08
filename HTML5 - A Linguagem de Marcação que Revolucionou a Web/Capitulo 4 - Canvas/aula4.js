@@ -94,6 +94,7 @@ function linhaPoligonal(){
 	//Esse método destina-se a desenhar uma linha reta desde a posição na qual se encontra a pena até as coordenadas x e y
 	ctx.lineTo(80,120);
 	
+	//Esse método destina-se a aplicar os estilos definidos pelos atributos de criação no caminho construído	
 	ctx.stroke();
 
 	ctx.beginPath();
