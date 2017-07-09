@@ -289,6 +289,30 @@ function formaAcabamentoLinha(){
 }
 
 
+function gradientesLineares(){
+
+	var canvas = document.getElementById('quadro')	;
+	var ctx = canvas.getContext('2d');
+
+	//Cria um gradiente de vermelho para azul
+	gradient = ctx.createLinearGradient(10, 10, 250, 100);
+	gradient.addColorStop(0, '#F00');
+	gradient.addColorStop(1, '#00F');
+
+
+	ctx.fillStyle = gradient;
+	ctx.fillRect(10, 10, 250, 100);
+
+	ctx.fill();
+
+}
+
+
+
+
+
+
+
 
 
 
