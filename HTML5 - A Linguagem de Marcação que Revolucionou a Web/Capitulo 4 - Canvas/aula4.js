@@ -360,8 +360,23 @@ function gradientesRadiais(){
 	ctx.fill();
 }
 
+function composicaoImagem(){
 
+	var canvas = document.getElementById('quadro');
+	var ctx = canvas.getContext('2d');
+	ctx.fillStyle = '#900';
+	ctx.fillRect(40, 20, 120, 80);
 
+	//Esse atributo destina-se a definir como uma imagem será desenhada em relação ao estado atual do desenho em 
+	//canvas, ou ainda, como será a composição das duas imagens.
+	ctx.globalCompositeOperation = 'xor' //Valores: source-atop, source-in, source-over, source-out, destination-atop
+										 //destination-in, destination-over, destination-out, lighter, copy e xor				
+
+	ctx.fillStyle = '#090';
+	ctx.beginPath();
+	ctx.arc(200, 75, 70, 0, 2 * Math.PI, true);
+	ctx.fill();
+}
 
 
 
