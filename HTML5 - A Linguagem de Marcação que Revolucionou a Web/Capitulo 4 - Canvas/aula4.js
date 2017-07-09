@@ -308,13 +308,20 @@ function gradientesLineares(){
 	gradient1.addColorStop(0.5, '#FF9');
 	gradient1.addColorStop(0, '#9CF');
 
+	//Cria um gradiente de laranja para amarelo claro	
+	gradient2 = ctx.createLinearGradient(60, 120, 180, 120);
+	gradient2.addColorStop(0, '#F90');
+	gradient2.addColorStop(1, '#FFC');
+
 	//Aplica os gradientes em dois retângulos e um circulo
 	ctx.fillStyle = gradient;
-	ctx.fillRect(10, 10, 250, 100);
+	ctx.fillRect(10, 10, 100, 50);
 
 	ctx.fillStyle = gradient1;
-	ctx.fillRect(280,20,100,160);
+	ctx.fillRect(10,80,100,50);
 
+	ctx.fillStyle = gradient2;
+	ctx.arc(200, 80, 60, 0, 2 * Math.PI, true);
 	ctx.fill();
 
 }
