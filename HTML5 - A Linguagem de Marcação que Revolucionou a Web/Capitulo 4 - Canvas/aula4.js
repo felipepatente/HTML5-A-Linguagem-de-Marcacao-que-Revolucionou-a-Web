@@ -497,6 +497,34 @@ function recortarImagem(){
 	ctx.drawImage(elImagem, 2, 2, 25, 30, 100, 100, 50, 60);
 }
 
+function definirTexto(){
+
+	var canvas = document.getElementById('quadro');
+	var ctx = canvas.getContext('2d');
+
+	//Esse atributo define as características da fonte a ser usada nos textos a serem inseridos em canvas.
+	ctx.font = 'italic small-caps bold 40px Georgia, sans-serif';
+
+	ctx.fillStyle = '#0F0';
+	ctx.strokeStyle = '#009';
+
+	//Esse método destina-se a definir o preenchimento do texto a inserir.
+	ctx.fillText('Livro Html5', 15, 40);
+
+	//Esse método destina-se a definir o contorno do texto a inserir
+	ctx.strokeText('Livro Html5', 15, 40);
+
+	ctx.font = '100px Arial, serif';
+
+	ctx.lineWidth = 2;
+
+	ctx.storkeStyle = '#C30';
+	ctx.strokeText('Livro Html5 do Maujor', 50, 126, 200);
+
+}
+
+
+
 
 
 
