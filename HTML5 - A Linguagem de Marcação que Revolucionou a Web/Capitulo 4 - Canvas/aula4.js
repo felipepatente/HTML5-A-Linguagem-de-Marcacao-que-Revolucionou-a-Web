@@ -466,6 +466,25 @@ function rotacionar(){
 }
 
 
+function inserirImagem(){
+
+	var canvas = document.getElementById('quadro');
+	var ctx = canvas.getContext('2d');
+	var elImagem = document.createElement('img');
+	elImagem.src = 'curso.png';
+	ctx.drawImage(elImagem, 2, 2);
+}
+
+
+
+function inserirImagem2(){
+
+	var canvas = document.getElementById('quadro');
+	var ctx = canvas.getContext('2d');
+	var elImagem = document.createElement('img');
+	elImagem.src = 'curso.png';
+	ctx.drawImage(elImagem, 2, 2);
+}
 
 
 
