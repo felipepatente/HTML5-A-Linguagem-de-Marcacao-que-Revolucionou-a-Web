@@ -294,14 +294,26 @@ function gradientesLineares(){
 	var canvas = document.getElementById('quadro')	;
 	var ctx = canvas.getContext('2d');
 
+	/*createLinearGradient(x, y, x1, y1) - Esse método destina-se a criar um gradiente linear. As coordenadas x, y,
+	e x1, y1 definem os pontos nos quais começa e termina respectivamente o gradiente.*/
+
 	//Cria um gradiente de vermelho para azul
 	gradient = ctx.createLinearGradient(10, 10, 250, 100);
 	gradient.addColorStop(0, '#F00');
 	gradient.addColorStop(1, '#00F');
 
+	//Cria um gradiente de verde para amarelo e azul claro
+	gradient1 = ctx.createLinearGradient(330, 20, 330, 160);
+	gradient1.addColorStop(0, '#090');
+	gradient1.addColorStop(0.5, '#FF9');
+	gradient1.addColorStop(0, '#9CF');
 
+	//Aplica os gradientes em dois retângulos e um circulo
 	ctx.fillStyle = gradient;
 	ctx.fillRect(10, 10, 250, 100);
+
+	ctx.fillStyle = gradient1;
+	ctx.fillRect(280,20,100,160);
 
 	ctx.fill();
 
