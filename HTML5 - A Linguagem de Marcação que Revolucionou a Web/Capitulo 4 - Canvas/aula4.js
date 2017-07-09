@@ -476,7 +476,6 @@ function inserirImagem(){
 }
 
 
-
 function inserirImagem2(){
 
 	var canvas = document.getElementById('quadro');
@@ -484,6 +483,18 @@ function inserirImagem2(){
 	var elImagem = document.createElement('img');
 	elImagem.src = 'curso.png';
 	ctx.drawImage(elImagem, 2, 2);
+}
+
+
+function recortarImagem(){
+
+	var canvas = document.getElementById('quadro');
+	var ctx = canvas.getContext('2d');
+	var elImagem = document.createElement('img');
+	elImagem.src = 'curso.png';
+
+	//recorta a imagem elImagem e insere com o dobro do tamanho nas coordenadas 100, 100
+	ctx.drawImage(elImagem, 2, 2, 25, 30, 100, 100, 50, 60);
 }
 
 
