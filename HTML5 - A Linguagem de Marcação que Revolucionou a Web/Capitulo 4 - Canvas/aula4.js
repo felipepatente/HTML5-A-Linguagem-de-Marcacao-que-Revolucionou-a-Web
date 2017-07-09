@@ -449,6 +449,23 @@ function deslocar(){
 	ctx.fillRect(105, 28, 80, 80);
 }
 
+function rotacionar(){
+
+	var canvas = document.getElementById('quadro');
+	var ctx = canvas.getContext('2d');
+	ctx.fillStyle = '#DDD';
+	ctx.fillRect(62, 45, 170, 50); //Retângulo referência
+
+	var angulo = 6;
+
+	//Esse método destina-se a transformar o desenho, alterando sua posição como se tivéssemos rotacionando canvas
+	ctx.rotate(Math.PI / angulo);
+
+	ctx.fillStyle = 'rgba(0, 100, 0, 0.5)';
+	ctx.fillRect(62, 45, 170, 50);
+}
+
+
 
 
 
