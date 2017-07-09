@@ -546,10 +546,39 @@ function alinharTexto(){
 	//os valores start, end, left, right e center
 	ctx.textAlign = 'center'; 
 
-	ctx.fillText('Maujor', 70,85)
+	ctx.fillText('Maujor', 70,85);
 
 }
 
+
+
+function definirTextoBaseLinha(){
+		
+	var canvas = document.getElementById('quadro');
+	var ctx = canvas.getContext('2d');
+
+	//Texto referência em cinza
+	ctx.font = '50px serif';
+	ctx.fillStyle = '#CCC';
+	ctx.fillText('Maujor', 70, 100);
+
+	//Ponto de referência em azul
+	ctx.moveTo(0, 101);
+	ctx.lineTo(400,101);
+	ctx.strokeStyle = '#00F';
+	ctx.stroke();
+
+	//Texto a alinhar em vermelho
+	ctx.font = '50px serif';
+	ctx.fillStyle = 'rgba(200, 0, 0, 0.6)';
+
+	//Esse atributo destina-se a definir o alinhamento do texto a inserir em relação ás linhas-base do texto.
+	//Admite os valores top, hanging, alphabetic, middle, ideografic e bottom. O valor padrão é alphabetic
+	ctx.textBaseline = 'bottom'; 
+
+	ctx.fillText('Maujor', 70,100);
+
+}
 
 
 
