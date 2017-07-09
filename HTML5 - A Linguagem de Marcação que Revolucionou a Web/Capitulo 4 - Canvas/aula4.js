@@ -434,6 +434,21 @@ function definirEscala(){
 
 }
 
+function deslocar(){
+
+	var canvas = document.getElementById('quadro');
+	var ctx = canvas.getContext('2d');
+	ctx.fillStyle = '#DDD';
+	ctx.fillRect(105, 28, 80, 80); //Quadro referência
+
+	//Esse método destina-se a deslocar de um valor x e/ou y em pixel as coordenadas de origem de canvas, o que 
+	//equivale ao deslocamento de todos os gráficos nele inseridos
+	ctx.translate(20,-10);
+
+	ctx.fillStyle = 'rgba(0, 100, 0, 0.5)';
+	ctx.fillRect(105, 28, 80, 80);
+}
+
 
 
 
