@@ -295,7 +295,7 @@ function gradientesLineares(){
 	var ctx = canvas.getContext('2d');
 
 	/*createLinearGradient(x, y, x1, y1) - Esse método destina-se a criar um gradiente linear. As coordenadas x, y,
-	e x1, y1 definem os pontos nos quais começa e termina respectivamente o gradiente.*/
+	  e x1, y1 definem os pontos nos quais começa e termina respectivamente o gradiente.*/
 
 	//Cria um gradiente de vermelho para azul
 	gradient = ctx.createLinearGradient(10, 10, 250, 100);
@@ -327,7 +327,38 @@ function gradientesLineares(){
 }
 
 
+function gradientesRadiais(){
 
+	var canvas = document.getElementById('quadro');
+	var ctx = canvas.getContext('2d');
+
+	/*creteRadialGradient(x, y, r, y1, r, r1) - Esse método destina-se a criar um gradiente radial. As coordenadas
+	  x, y e x1, y1 definem os centros dos círculos nos quais começam e terminam respectivamente o gradiente
+	  e os parâmetros r e r1 seus raios */
+	gradient = ctx.createRadialGradient(130, 60, 10, 130, 60, 160);
+	gradient.addColorStop(0, '#F00');
+	gradient.addColorStop(1, '#00F')
+
+	gradient1 = ctx.createRadialGradient(330, 50, 5, 330, 50, 130);
+	gradient1.addColorStop(0, '#090');
+	gradient1.addColorStop(0.5, '#FD8');
+	gradient1.addColorStop(1, '#9CF');
+
+	gradient2 = ctx.createRadialGradient(100, 100, 5, 100, 100, 60);
+	gradient2.addColorStop(0, '#F90');
+	gradient2.addColorStop(1, '#F5F5F5');
+
+	//Criando 2 retângulos e uma elipse
+	ctx.fillStyle = gradient;
+	ctx.fillRect(2, 2, 130, 80);
+
+	ctx.fillStyle = gradient1;
+	ctx.fillRect(2, 84, 130, 80);
+
+	ctx.fillStyle = gradient2;
+	ctx.arc(220, 80, 60, 0, 2 * Math.PI, true);
+	ctx.fill();
+}
 
 
 
