@@ -523,7 +523,32 @@ function definirTexto(){
 
 }
 
+function alinharTexto(){
 
+	var canvas = document.getElementById('quadro');
+	var ctx = canvas.getContext('2d');
+
+	//Texto referência em cinza
+	ctx.font = '50px serif';
+	ctx.fillStyle = '#CCC';
+	ctx.fillText('Maujor', 70, 85);
+
+	//Ponto de referência em azul
+	ctx.fillStyle = '#006';
+	ctx.arc(70, 85, 3, 0, 2 * Math.PI, true);
+	ctx.fill();
+
+	//Texto a alinhar em vermelho
+	ctx.font = '50px serif';
+	ctx.fillStyle = 'rgba(200, 0, 0, 0.6)';
+
+	//Esse atributo destina-se a definir o alinhamento do texto a inserir em relação ao ponto de inserção. Admite 
+	//os valores start, end, left, right e center
+	ctx.textAlign = 'center'; 
+
+	ctx.fillText('Maujor', 70,85)
+
+}
 
 
 
