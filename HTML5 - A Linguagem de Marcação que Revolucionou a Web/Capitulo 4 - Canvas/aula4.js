@@ -413,10 +413,26 @@ function salvarDesenho(){
 	ctx1.fillRect(216, 2, 20, 140);
 
 	ctx1.restore();
-	ctx1.fillRect(238, 2, 20, 140)
+	ctx1.fillRect(238, 2, 20, 140);
 
 }
 
+
+function definirEscala(){
+
+	var canvas = document.getElementById('quadro');
+	var ctx = canvas.getContext('2d');
+
+	ctx.fillStyle = '#DDD';
+	ctx.fillRect(10, 5, 90, 90);//Quadro referência
+
+	//Esse método desetina-se a escalar as dimensões x e/ou y de todos os gráficos inseridos em canvas.
+	ctx.scale(2,0.5);
+	
+	ctx.fillStyle = 'rgba(0, 100, 0, 0.5)';
+	ctx.fillRect(10, 5, 90, 90);
+
+}
 
 
 
