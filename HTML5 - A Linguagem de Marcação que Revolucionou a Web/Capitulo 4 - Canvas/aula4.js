@@ -379,6 +379,48 @@ function composicaoImagem(){
 }
 
 
+function salvarDesenho(){
+
+	var canvas = document.getElementById('quadro')
+	var ctx = canvas.getContext('2d');
+
+	ctx.fillStyle = 'red';
+	ctx.fillRect(2, 2, 20, 140);
+
+	ctx.fillStyle = 'green';
+	ctx.fillRect(24, 2, 20, 140);
+
+	ctx.fillStyle = 'blue';
+	ctx.fillRect(46, 2, 20, 140);
+	ctx.fillRect(68, 2, 20, 140);
+	ctx.fillRect(90, 2, 20, 140);
+
+	var canvas1 = document.getElementById('quadro');
+	var ctx1 = canvas1.getContext('2d');
+
+	ctx1.fillStyle = 'red';
+	ctx1.fillRect(150, 2, 20, 140);
+	ctx1.save();
+
+	ctx1.fillStyle = 'green';
+	ctx1.fillRect(172, 2, 20, 140);
+	ctx1.save();
+
+	ctx1.fillStyle = 'blue';
+	ctx1.fillRect(194, 2, 20, 140);
+
+	ctx1.restore();
+	ctx1.fillRect(216, 2, 20, 140);
+
+	ctx1.restore();
+	ctx1.fillRect(238, 2, 20, 140)
+
+}
+
+
+
+
+
 
 
 
