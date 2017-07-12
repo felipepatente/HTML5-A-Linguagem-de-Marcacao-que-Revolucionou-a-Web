@@ -36,8 +36,19 @@
 	<!-- O atributo translate destina-se a fornecer informação sobre a tradução de nós de textos e de valores de atributos de um elemento da marcação quando se trata de páginas servidas para diferentes idiomas com uso de mecanismos de deteção de localização -->
 	<a translate="yes" href="https://www.google.com.br/?gws_rd=ssl" title="Site do Google">Google</a>
 
+	<!-- autocomplete: agentes de usuário oferecem uma funcionalidade que consiste em preencher ou sugerir opções de preenchimento de um campo com base no que nele foi digitado anteriormente pelo usuário.
+	Esse atributo destina-se a controlar esse comportamento habilitando ou não o ato de autopreenchimento -->
+	<form>
+		<p><label>Nome: <input type="text" name="texto" autocomplete></label></p>
+	</form>
 
 
+	<!-- O atributo autofocus destina-se a definir em qual elemento deve ser dado o foco tão logo a página seja carregada. -->
+	<form method="get" action=""> 
+		<p><label>Nome: <input type="text"></label></p>
+		<p><label>Email: <input type="text" autofocus></label></p>
+		<p><label>Cidade:<input type="text"> </label></p>
+	</form>
 
 
 
