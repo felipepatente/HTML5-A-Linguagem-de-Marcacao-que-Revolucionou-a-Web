@@ -1,0 +1,8 @@
+.cssval:valid{
+	background: #0F0;
+}
+
+.cssval:invalid{
+	background: #F00;
+	color: #FFF;
+}
