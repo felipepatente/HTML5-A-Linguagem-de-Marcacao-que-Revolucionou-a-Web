@@ -39,7 +39,16 @@
 	<p><label>Nome: <input type="text" name="nome" form="xpto"></label></p>
 
 
-
+	<!-- O atributo formaction tem o mesmo efeito do atributo action para o elemento form, ou seja, destina-se a definir um URL para a qual o formulário será enviado para processamento -->
+	<form>
+		<fieldset>
+			<legend>Formulário 2</legend>
+			<p><label>Nome: <input type="text" name="nome"></label></p>
+			<p><label>Email: <input type="text" name="email"></label></p>
+			<p><label>Mensagem: <textarea rows="3" cols="15" name="msg"></textarea></label></p>
+			<p><input type="submit" name="enviar" value="enviar" formaction=""></p>
+		</fieldset>
+	</form>
 
 
 
