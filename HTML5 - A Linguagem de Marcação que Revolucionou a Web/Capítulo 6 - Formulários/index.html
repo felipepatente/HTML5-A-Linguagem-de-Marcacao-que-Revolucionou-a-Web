@@ -50,11 +50,23 @@
 		</fieldset>
 	</form>
 
+	<!-- O atributo formenctype destina-se a definir o tipo de conteúdo que está sendo enviado pelo formulário -->
+	<form method="post" action="">
+		<p><label>Arquivo: <input type="file" name="arq"></label></p>
+		<!-- ... -->
+		<p><input type="submit" name="enviar" value="enviar" formenctype="multipart/form-data"></p>
+	</form>
 
 
-
-
-
+	<!-- O atributo formmethod tem o mesmo efeito do atributo method para o elemento form, ou seja, destina-se a definir o método usado para enviar os dados do formulário -->
+	<form action="">
+		<fieldset>
+			<legend>Formulário 3</legend>
+			<p><label>Nome: <input type="text" name="nome"></label></p>
+			<p><label>Mensagem: <textarea rows="3" cols="20" name="msg"></textarea></label></p>
+			<p><input type="submit" name="enviar" value="enviar" formmethod="get"></p>
+		</fieldset>
+	</form>
 
 
 
