@@ -22,5 +22,34 @@
 	<form method="get" action="">
 		<p><label>Nome:<input type="text" name="nome" autocomplete="on"></label></p>
 	</form>
+
+
+	<form method="get" action="" id="xpto">
+		<fieldset>
+			<legend>Formulário</legend>
+			<p><label>Email: <input type="text" name="email"></label></p>
+			<p><label>Mensagem: <textarea rows="3" cols="15" name="msg"></textarea></label></p>
+			<p><input type="submit" name="enviar" value="enviar"></p>
+		</fieldset>
+	</form>
+
+	<!-- O atributo form destina-se a associar um controle de formulário a um elemento formulário.
+	Neste exemplo o campo para preenchimento do nome está fora do formulário, mas seu conteúdo será enviado normalmente ao servidor para processamento quando o formulário for enviado.
+	 -->
+	<p><label>Nome: <input type="text" name="nome" form="xpto"></label></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
