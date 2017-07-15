@@ -6,7 +6,7 @@ function chamarLocalizacao(){
 	}
 }
 
-
+// ----------------------------------------------------------------------
 function obterPosicao(){
 	
 	if(navigator.geolocation){
@@ -26,8 +26,10 @@ function sucessos(position){
 	mensagem += "Longitude: " + longitude;
 	document.getElementById('msg').innerHTML = mensagem;
 }
+// ----------------------------------------------------------------------
 
 
+// ----------------------------------------------------------------------
 function propriedadesPosition(){
 
 	if(navigator.geolocation){
@@ -61,6 +63,71 @@ function sucesso(position){
 	mensagem += "Tempo: " + tempo + " milissegundos";
 	document.getElementById('msgg').innerHTML = mensagem;
 }
+// ----------------------------------------------------------------------
+
+
+function inspecionarErro(){
+
+	if(navigator.geolocation){
+		navigator.geolocation.getCurrentPosition(sucess,erro);
+	}else{
+		alert("Este navegador não suporta a funcionalidade Geolocation");
+	}
+}
+
+function erro(err){
+
+	switch(err.code){
+		case 1:
+			var mensagemErro = "A permissão para obter a sua posição foi negada.";
+			break;
+
+		case 2:
+			var mensagemErro = "Não foi possível estabeler uma conexão para obter á sua posição.";
+			break;
+
+		case 3:
+			var mensagemErro = "Tempo esgotado."
+			break;
+
+		default:
+			var mensagemErro = "Não foi possível obter sua posição";
+			break;
+	}
+
+	var codigoErro = err.code;
+	var mensagem = "Ocorreu um erro na determinação da posição: <br>";
+	mensagem += "Código do erro: " + codigoErro + "<br>";
+	mensagem += "Mensagem: " + mensagemErro;
+	document.getElementById('mssg').innerHTML = mensagem;
+}
+
+
+function sucess(position){
+	document.getElementById('mssg').innerHTML = "Provoque um erro, negando...";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
