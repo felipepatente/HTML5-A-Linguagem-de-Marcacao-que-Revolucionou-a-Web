@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Capitulo</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		function chamar() {
+			if(!window.indexedDB){
+				alert("Lamento, seu navegador não suporta armazenamento com uso de indexedDB");
+			}else{
+				
+				var mensagem = document.getElementId('mensagem');
+				var limpar = document.getElementById('limpar');
+				var request = window.indexedDB.open('catalogo',2);
+
+
+				
+			}
+		}
+	</script>
+</head>
+<body onload="chamar()">
+	<section>
+		<p id="mensagem"></p>
+		<button type="button" id="limpar">Remover mensagem</button>
+	</section>
+</body>
+</html>
