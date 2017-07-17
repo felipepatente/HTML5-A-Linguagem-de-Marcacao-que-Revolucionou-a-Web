@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Capítulo 8 - Exemplo de armazenamento de dado com JSON</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		
+		function somarSimples(){
+
+			localStorage.setItem('a',4);
+			localStorage.setItem('b',3);
+			var a = localStorage.getItem('a');
+			var b = localStorage.getItem('b');
+
+			document.getElementById('campo1').value = a + b;
+		}
+
+		function limparCampos(){
+			document.getElementById('campo1').value = "clique";
+			document.getElementById('campo2').value = "clique";
+		}
+
+		var numeros = {
+			a: 4,
+			b: 3,
+		}
+
+		function somarComJSON(){
+			localStorage.setItem(numeros, JSON.stringify(numeros));
+			JSON.parse(localStorage.getItem(numeros));		
+			document.getElementById('campo2').value = numeros.a + numeros.b;
+		}
+
+	</script>
+</head>
+<body>
+	<section>
+		<p>Armazenar com sessionStorage simples (operação de concatenação):<br>
+		4 + 3 = <input  value="clique" id="campo1" onclick="somarSimples()"></p>
+		<p>Armazenar com sessionStorage e JSON (operação de adição):<br>
+		4 + 3 = <input value="clique" id="campo2" onclick="somarComJSON()"></p>
+		<button type="button" id="limpar" onclick="limparCampos()">Limpar</button>
+	</section>
+</body>
+</html>
