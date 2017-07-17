@@ -15,7 +15,7 @@ function salvarDado(name) {
 	if(!valor){
 		alert("Entre um valor para o dado a armazenar.");
 	}else{
-		mensagem = "Um dado com o nome " + nome + " com o valor " + valorItemStorage + "\n";
+		mensagem = "Um dado com o nome " + nome + " e com o valor " + valorItemStorage + "\n";
 		mensagem += "foi armazenado";
 		alert(mensagem);
 	}
@@ -23,11 +23,13 @@ function salvarDado(name) {
 
 function lerDado(name){
 
-	var valorItemStorage = localStorage.getItem('idade');
-	if(!valorItemStorage){
-		alert("Não existe valor para ser lido");
+	var nome = document.getElementById('nomedado').value;
+	var valorItemStorage = localStorage.getItem(nome);
+
+	if(!valorItemStorage || nome == ""){
+		alert("Não existe valor para ser lido ou você não digitou um valor no campo do nome");
 	}else{
-		mensagem = "Um dado com o nome idade com o valor " + valorItemStorage + "\n";
+		mensagem = "Um dado com o nome " + nome +" com o valor " + valorItemStorage + "\n";
 		mensagem += "foi lido";
 		alert(mensagem);
 	}
