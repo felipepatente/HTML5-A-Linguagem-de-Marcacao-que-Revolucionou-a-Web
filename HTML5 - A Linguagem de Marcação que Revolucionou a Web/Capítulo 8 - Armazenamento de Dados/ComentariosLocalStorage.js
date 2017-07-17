@@ -76,5 +76,5 @@ function visualizarPaginas(){
 
 
 function verTotalDados(){
-	alert("Quantidade de dados");
+	alert("Quantidade de dados: " + localStorage.length);
 }

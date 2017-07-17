@@ -30,12 +30,6 @@ function apagarDado(name){
 	alert("Dado com o nome dataStorage foi apagado");
 }
 
-var cont = 0;
-function visualizarPaginas(){
-		cont = cont + 1
-		document.getElementById('count').textContent = cont;
-	
-}
 
 
 
