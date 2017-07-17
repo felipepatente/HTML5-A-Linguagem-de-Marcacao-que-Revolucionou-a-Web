@@ -13,7 +13,7 @@
 			<p>
 				<p>
 					<label>Escolha um valor para o dado "meuDado":</label>
-					<p><br>Nome do dado:<input name="nomedado"></p>
+					<p><br>Nome do dado:<input name="nomedado" id="nomedado"></p>
 					<p><br>Valor do dado:<input name="dadovalue"></p>
 				</p>
 			</p>
@@ -21,7 +21,11 @@
 
 		<p><a href="#" onclick="salvarDado('meuDado')">Armazenar dado</a></p>
 		<p><a href="#" onclick="lerDado('meuDado')">Ler dado</a></p>
-		<p><a href="#" onclick="apagarDado('meuDado')">Apagar dado</a></p>		
+		<p><a href="#" onclick="apagarDado('meuDado')">Apagar dado</a></p>
+		<p><a href="#" onclick="apagarTodosDados()">Apagar todos os dados</a></p>
 	</section>
+
+	<p>Você visualizou esta página <span id="count"></span> vezes.</p>
+	<input type="text" onclick="visualizarPaginas()">
 </body>
 </html>

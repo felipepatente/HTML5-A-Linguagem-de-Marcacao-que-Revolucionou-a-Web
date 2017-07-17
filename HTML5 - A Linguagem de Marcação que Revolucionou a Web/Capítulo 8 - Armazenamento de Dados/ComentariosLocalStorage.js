@@ -27,7 +27,7 @@ function lerDado(name){
 	var valorItemStorage = localStorage.getItem(nome);
 
 	if(!valorItemStorage || nome == ""){
-		alert("Não existe valor para ser lido ou você não digitou um valor no campo do nome");
+		alert("Não existe valor para ser lido ou você não digitou um valor valido no campo do nome");
 	}else{
 		mensagem = "Um dado com o nome " + nome +" com o valor " + valorItemStorage + "\n";
 		mensagem += "foi lido";
@@ -36,10 +36,25 @@ function lerDado(name){
 
 }
 
-function apagarDado(name){
+function apagarDado(){
 
-	//removeItem(nome): Esse método destina-se a apagar da área de armazenamento o par nome/valor de um dado
-	//designado nome. 
-	localStorage.removeItem('dataStorage');
-	alert("Dado com o nome dataStorage foi apagado");
+	
+	var nome = document.getElementById('nomedado').value;
+	if(nome != ""){
+		
+		//removeItem(nome): Esse método destina-se a apagar da área de armazenamento o par nome/valor de um dado
+		//designado nome. 
+		localStorage.removeItem(nome);
+		alert("Dado com o nome "+ nome +" foi apagado");
+	}else{
+		alert("Digite um nome valido");
+	}
+}
+
+function apagarTodosDados(){
+
+	//Esse método não requer parâmetros e se destina a apagar todo o conteúdo da área de armazenamento, isto é,
+	//esvazia o objeto localStorage
+	localStorage.clear();
+	alert("Os Dados foram apagados");
 }
