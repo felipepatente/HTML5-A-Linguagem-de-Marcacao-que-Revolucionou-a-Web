@@ -76,5 +76,8 @@ function visualizarPaginas(){
 
 
 function verTotalDados(){
+
+	//length: Essa propriedade destina-se a inspecionar a quantidade de dados (pares nome/valor) armazenados nos 
+	//objeto localStorage.
 	alert("Quantidade de dados: " + localStorage.length);
 }
