@@ -58,3 +58,23 @@ function apagarTodosDados(){
 	localStorage.clear();
 	alert("Os Dados foram apagados");
 }
+
+function LerUmDado(){
+
+	var posicao = document.getElementById('posicao').value;
+
+	//key(n): Esse método destina-se a insepecionar o nome do dado armazenado na posição n.
+	alert("Nome do dado: " + localStorage.key(posicao));
+}
+
+var cont = 0;
+function visualizarPaginas(){
+		cont = cont + 1
+		document.getElementById('count').textContent = cont;
+	
+}
+
+
+function verTotalDados(){
+	alert("Quantidade de dados");
+}
