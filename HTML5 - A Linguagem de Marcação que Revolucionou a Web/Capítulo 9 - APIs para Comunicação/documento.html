@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Não conseguir fazer funcionar este exemplo -->
+	<title>Capitulo 9 - APIs para Comunicação</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		window.onload = function() {
+			var objetoIframe = document.getElementsByTagName('iframe')[0];
+			var btnEnviar = document.getElementsByTagName('button')[0];
+			btnEnviar.onclick = function(){
+				var textoMensagem = document.getElementsByTagName('input')[0].value;
+				objetoIframe.contentWindow.postMessage(textoMensagem, 'https://maujor.com');
+			}
+		}
+	</script>
+
+	<style type="text/css">
+		body{
+			font: 14px/20px sans-serif;
+		}
+
+		p{
+			margin:0;
+			padding: 5px 0;
+			border-bottom: 1px dotted #CCC;
+		}
+
+		h2{
+			color: #F00;
+		}
+	</style>
+</head>
+<body>
+	<section>
+		<p><label>Mensagem:<input type="text" value="Alô Mundo" disabled></label>
+		<button type="button">Enviar mensagem</button></p>
+		<iframe src="https://maujor.com/messaging2ed.html"></iframe>
+	</section>
+</body>
+</html>

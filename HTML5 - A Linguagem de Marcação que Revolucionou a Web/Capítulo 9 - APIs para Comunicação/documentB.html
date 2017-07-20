@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Este exemplo não funciona -->
+	<title>Capitulo 9 - APIs para Comunicação</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		
+		function carregar(){
+			if(window.addEventListener){
+				window.addEventListener('message',receberMensagem,false);
+			}else{
+				window.attachEvent('onmessage',receberMensagem);
+			}
+		}
+
+		function receberMensagem(e) {
+			var containerMensagem, msgRecebida, nomeRecebido, textoRecebido, horaRecebida;
+			containerMensagem = document.getElementById('recebe-mensagem');
+
+			if(e.origin == 'http://livrohtml5.com.br'){
+				msgRecebida = JSON.parse(e.data);
+				nomeRecebido = msgRecebida.nome;
+				textoRecebido = msgRecebida.texto;
+				horaRecebida = msgRecebida.hora;
+				containerMensagem.innerHTML = '<h2>Dados recebidos</h2><p>Nome: ' + nomeRecebido + '<br> Mensagem: ' +textoRecebido + '<br>Hora: ' + horaRecebida + '</p>';
+			}else{
+				containerMensagem.innerHTML = 'Tentativa de envio de mensagem de uma origem nao autorizada';
+			}
+		}
+	</script>
+</head>
+<body onload="carregar()">
+	<section>
+		<div id="recebe-mensagem"></div>
+	</section>
+</body>
+</html>

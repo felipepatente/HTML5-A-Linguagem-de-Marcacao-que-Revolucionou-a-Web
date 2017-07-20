@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Este exemplo não funciona -->
+	<title>Capitulo 9 - APIs para Comunicação</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		body{
+			font: 14px/20px sans-serif;
+		}
+
+		p{
+			margin: 0;
+			padding: 5px 0;
+			border-bottom: 1px dotted #CCC;
+		}
+
+		h2{
+			color:#F00;
+		}
+	</style>
+
+	<script type="text/javascript">
+		function carregar(){
+			var objetoIframe, nomeUsuario, horaMensagem, textoMensagem, dadosEnviar, stringEnviar;
+			objetoIframe = document.getElementsByTagName('iframe')[0];
+			btnEnviar = document.getElementsByTagName('button')[0];
+		}
+
+		function enviarMensagem(){
+				
+				carregar();
+				now = new Date();
+				hour = now.getHours();
+				minute = now.getMinutes();
+				second = now.getSeconds();
+
+				horaMensagem = hour + ':' + minute + ':' second + 'h';
+				nomeUsuario = document.getElementsByTagName('input')[0].value;
+				textoMensagem = document.getElementsByTagName('textarea')[0].value;
+
+				if(textoMensagem == '' || nomeUsuario == ''){
+					alert('Os campos nome e mensagem devem ser preenchidos');
+				}else{
+					dadosEnviar = {
+						nome: nomeUsuario,
+						texto: textoMensagem
+						hora: horaMensagem
+					}
+
+					stringEnviar = JSON.stringify(dadosEnviar);
+					objetoIframe.contentWindow.postMessage(stringEnviar, 'http://livrohtml5.com.br');
+				}
+			}
+	</script>
+</head>
+<body>
+
+	<section>
+		<p><label>Seu nome:<br><input type="text"></label></p>
+		<p><label>Mensagem:<br><textarea></textarea></label></p>
+		<p><button type="button" onclick="enviarMensagem()">Enviar mensagem</button></p>
+		<iframe src="documentB.html"></iframe>
+	</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
