@@ -1,0 +1,12 @@
+CACHE:
+#lista dos arquivos para uso offline
+index.html
+estilos.css
+
+
+NETWORK:
+#lista dos arquivos não necessários para uso offline
+
+
+FALLBACK:
+#lista dos arquivos alternativos para uso offline
