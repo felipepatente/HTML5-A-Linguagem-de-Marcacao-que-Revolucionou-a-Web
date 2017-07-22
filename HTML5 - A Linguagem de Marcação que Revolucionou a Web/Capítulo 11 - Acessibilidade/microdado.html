@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Capítulo 11 - Acessibilidade (Exemplo de microdados)</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h2>Sem mecanismos de microdados</h2>
+	<div>
+		Meu nome é Maurício Samy Silva, mas sou conhecido como "Maujor". Meu site é: <a href="http://maujor.com">www.maujor.com</a>.Eu moro no Rio de Janeiro, RJ e sou um egenheiro civil da PLANGEN. Meus amigos são:
+		<a href="http://joao.com">Joao</a>,
+		<a href="http://maria.com">Maria</a>
+	</div>
+
+	<h2>Com mecanismos de microdados</h2>
+	<!-- A seguir, a mesma marcação mostrada anteriormente com a inclusão dos mecanismos de Microdados. -->
+	<div itemscope itemtype="http://data-vocabulary.org/Person">
+		Meu nome é <span itemprop="name">Maurício Samy Silva</span>, mas sou conhecido como <span itemprop="nickname"> "Maujor"</span>. Meu site é: <a href="http://maujor.com">www.maujor.com</a>.Eu moro no <span itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address"> <span itemprop="locality">Rio de Janeiro</span>, <span itemprop="region"> RJ </span></span> e sou um <span itemprop="title">egenheiro civil </span> da <span itemprop="affiliation">PLANGEN</span>. Meus amigos são:
+		<a href="http://joao.com" rel="friend">Joao</a>,
+		<a href="http://maria.com" rel="friend">Maria</a>
+	</div>
+</body>
+</html>
